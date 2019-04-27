@@ -1,2 +1,2 @@
 decipher:
-	@./solution.py "$(publicKey)"
+	@python3 solution.py "$(publicKey)"
