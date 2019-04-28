@@ -41,6 +41,7 @@ class Curve:
         s = ((3 * xp ** 2 + self.a) * self.inv(2 * yp)) % self.fp
         xr = (s ** 2 - xp - xp) % self.fp
         yr = (s * (xp - xr) - yp) % self.fp
+        self.is_valid_point(self.P)
         return (xr, yr)
 
     def add_points(self, P, Q):
