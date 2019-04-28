@@ -52,11 +52,6 @@ class Curve:
         yr = (s * (xp - xr) - yp) % self.fp
         return (xr, yr)
 
-    def ec_inv(self, P):
-        if P == O:
-            return P
-        return (P[0], (-P[1]) % self.fp)
-
     def add_on_ecc(self, P):
         if P == self.P:
             return self.add_equal_points(P)
